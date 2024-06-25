@@ -4,8 +4,6 @@ import type { RouteRecordRaw, RouteLocationNormalized, NavigationGuardNext } fro
 import { useUserStore } from '@/stores/user';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-
-
   const checkAuth = (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
     const userStore = useUserStore();    
     
@@ -23,8 +21,6 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
       
     })  
   }
- 
-
 
 const routes: RouteRecordRaw[] = [
   {
