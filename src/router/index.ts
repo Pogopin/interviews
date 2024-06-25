@@ -8,8 +8,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
     const userStore = useUserStore();    
     
     let isAuth = false;
-    onAuthStateChanged(getAuth(), user => {
-      console.log(user)
+    onAuthStateChanged(getAuth(), user => {      
       if(user && !isAuth) {
         isAuth = true;
         next();

@@ -10,8 +10,8 @@ const isLoading = ref<boolean>(true)
 onMounted(() => {
   onAuthStateChanged(getAuth(), (user) => {    
     if(user) {      
-      // userStore.userId = user.uid;
-      console.log('user', userStore.userId);
+      userStore.userId = user.uid;
+      //console.log('user', userStore.userId);
     } else {
       userStore.userId = '';
     }
