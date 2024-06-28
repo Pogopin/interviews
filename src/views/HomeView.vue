@@ -21,7 +21,6 @@ const disabledSaveButton = computed(() => {
 	return !(company.value && vacancyLink.value && hrName.value)
 })
 
-
 const addNewInterview = async(): Promise<void> => {
 	loading.value = true;
 	const payload: IInterview = {
