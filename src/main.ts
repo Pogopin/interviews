@@ -19,7 +19,15 @@ import Card from 'primevue/card';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ConfirmDialog from 'primevue/confirmdialog';
-import InlineMessage from 'primevue/inlinemessage'
+import InlineMessage from 'primevue/inlinemessage';
+
+import Tooltip from 'primevue/tooltip';
+
+import InputNumber from 'primevue/inputnumber';
+import Textarea from 'primevue/textarea';
+import Calendar from 'primevue/calendar';
+import Radio from 'primevue/radiobutton';
+import Badge from 'primevue/badge';
 
 import App from './App.vue';
 import router from './router';
@@ -43,6 +51,8 @@ app.use(PrimeVue);
 app.use(ToastService);
 app.use(ConfirmationService);
 app.use(router);
+
+app.directive('tooltip', Tooltip)
 app.component('app-menubar', Menubar);
 app.component('app-button', Button);
 app.component('app-inputtext', InputText);
@@ -52,6 +62,12 @@ app.component('app-card', Card);
 app.component('app-datatable', DataTable);
 app.component('app-column', Column);
 app.component('app-dialog', ConfirmDialog);
-app.component('app-message', InlineMessage)
+app.component('app-message', InlineMessage);
+
+app.component('app-input-number', InputNumber);
+app.component('app-textarea', Textarea);
+app.component('app-calendar', Calendar);
+app.component('app-radio', Radio);
+app.component('app-badge', Badge);
 
 app.mount('#app');
